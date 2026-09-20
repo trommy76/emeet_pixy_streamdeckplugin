@@ -1,0 +1,11 @@
+{
+  "name": "com.emeetpixy.pixycontrol",
+  "private": true,
+  "description": "Runtime dependencies for the EMEET PIXY Control Stream Deck plugin. Run 'npm install --omit=dev' in this folder after copying the plugin, so node-hid's prebuilt binary for your Mac gets installed here.",
+  "dependencies": {
+    "node-hid": "3.4.0"
+  },
+  "allowScripts": {
+    "node-hid@3.4.0": true
+  }
+}

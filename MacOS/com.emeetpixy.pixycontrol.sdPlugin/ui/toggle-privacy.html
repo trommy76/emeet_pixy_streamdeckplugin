@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+  </head>
+  <body>
+    <sdpi-item label="When turning privacy off, restore">
+      <sdpi-select setting="restoreMode" default="track">
+        <option value="track">Track (AI auto-tracking)</option>
+        <option value="idle">Idle (stay put)</option>
+      </sdpi-select>
+    </sdpi-item>
+    <p style="opacity: 0.7; font-size: 11px; margin: 4px 8px;">
+      Each press asks the camera for its real current state, then flips between Privacy and the
+      mode above -- so this stays correct even if you also change modes with other buttons or
+      EMEET Studio.
+    </p>
+
+    <sdpi-item label="Advanced">
+      <details>
+        <summary style="cursor: pointer; opacity: 0.8;">HID device path override</summary>
+        <sdpi-textfield setting="hidPath" placeholder="Leave blank to auto-detect"></sdpi-textfield>
+        <p style="opacity: 0.7; font-size: 11px;">
+          Only needed if auto-detection picks the wrong USB HID interface. Find the right path with the
+          plugin's <code>list-hid-devices.mjs</code> diagnostic script (see the README).
+        </p>
+      </details>
+    </sdpi-item>
+  </body>
+</html>

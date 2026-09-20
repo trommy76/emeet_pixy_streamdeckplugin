@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+  </head>
+  <body>
+    <sdpi-item label="Control">
+      <sdpi-select setting="control" default="brightness">
+        <option value="brightness">Brightness</option>
+        <option value="contrast">Contrast</option>
+        <option value="saturation">Saturation</option>
+        <option value="sharpness">Sharpness</option>
+        <option value="gamma">Gamma</option>
+        <option value="gain">Gain</option>
+        <option value="backlight-compensation">Backlight Compensation</option>
+        <option value="white-balance-temp">White Balance Temperature</option>
+        <option value="auto-white-balance-temp">Auto White Balance (on/off)</option>
+        <option value="hue">Hue</option>
+        <option value="auto-hue">Auto Hue (on/off)</option>
+        <option value="auto-contrast">Auto Contrast (on/off)</option>
+      </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Value">
+      <sdpi-select setting="value" default="default">
+        <option value="default">Default</option>
+        <option value="minimum">Minimum (or Off, for on/off controls)</option>
+        <option value="maximum">Maximum (or On, for on/off controls)</option>
+        <option value="0.25">25%</option>
+        <option value="0.5">50%</option>
+        <option value="0.75">75%</option>
+      </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Advanced">
+      <details>
+        <summary style="cursor: pointer; opacity: 0.8;">Custom value / UVC target override</summary>
+        <sdpi-textfield setting="customValue" placeholder="Overrides Value above, e.g. 0.6 or a raw number"></sdpi-textfield>
+        <sdpi-textfield setting="uvcTarget" placeholder="0x328f:0x00c0"></sdpi-textfield>
+      </details>
+    </sdpi-item>
+
+    <p style="opacity: 0.7; font-size: 11px; margin: 4px 8px;">
+      Not every camera implements every control. Run <code>uvc-util -V 0x328f:0x00c0 -c</code> (see README) to see
+      exactly which ones the Pixy reports supporting -- a button for an unsupported control will show a failed
+      alert with uvc-util's own error message in the plugin's log.
+    </p>
+  </body>
+</html>

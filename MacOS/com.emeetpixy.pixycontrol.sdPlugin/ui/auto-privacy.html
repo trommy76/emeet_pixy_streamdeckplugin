@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <script src="sdpi-components.js"></script>
+  </head>
+  <body>
+    <sdpi-item label="Auto-privacy timeout">
+      <sdpi-select setting="seconds" default="30">
+        <option value="0">Off</option>
+        <option value="10">10 seconds</option>
+        <option value="30">30 seconds</option>
+        <option value="60">60 seconds</option>
+      </sdpi-select>
+    </sdpi-item>
+
+    <sdpi-item label="Advanced">
+      <details>
+        <summary style="cursor: pointer; opacity: 0.8;">HID device path override</summary>
+        <sdpi-textfield setting="hidPath" placeholder="Leave blank to auto-detect"></sdpi-textfield>
+        <p style="opacity: 0.7; font-size: 11px;">
+          Only needed if auto-detection picks the wrong USB HID interface. Find the right path with the
+          plugin's <code>list-hid-devices.mjs</code> diagnostic script (see the README).
+        </p>
+      </details>
+    </sdpi-item>
+  </body>
+</html>

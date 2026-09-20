@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Build output (run `npm run build` / `npm run build:native` to regenerate)
+com.emeetpixy.pixycontrol.sdPlugin/bin/plugin.js
+com.emeetpixy.pixycontrol.sdPlugin/bin/plugin.js.map
+com.emeetpixy.pixycontrol.sdPlugin/bin/uvc-util
+com.emeetpixy.pixycontrol.sdPlugin/bin/uvc-util.exe
+com.emeetpixy.pixycontrol.sdPlugin/bin/uvc-util-win.exe
+native/uvc-util-win/bin/
+native/uvc-util-win/obj/
+
+# Runtime data
+com.emeetpixy.pixycontrol.sdPlugin/logs/
+com.emeetpixy.pixycontrol.sdPlugin/node_modules/
