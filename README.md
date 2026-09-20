@@ -136,8 +136,11 @@ plugin's log -- harmless, just means that particular control isn't there.
   ships prebuilt binaries for Mac (Intel and Apple Silicon), so
   `npm install` should just work.
 - On Windows, `node-hid` similarly ships a prebuilt binary, so
+  You need npm installed:  https://nodejs.org/en/download/
+  You need .net SDK https://dotnet.microsoft.com/en-us/download
   `npm install` should just work there too.
-
+  
+  
 ## Setup
 
 1. **Install dependencies and build:**
