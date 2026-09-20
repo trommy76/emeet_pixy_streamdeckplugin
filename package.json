@@ -19,5 +19,9 @@
     "esbuild": "^0.24.0",
     "node-hid": "^3.4.0",
     "typescript": "^5.6.0"
+  },
+  "allowScripts": {
+    "esbuild@0.24.2": true,
+    "node-hid@3.4.0": true
   }
 }
